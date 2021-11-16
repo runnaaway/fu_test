@@ -54,6 +54,10 @@ const plugins = () => {
         from: path.resolve(__dirname, 'src/assets'),
         to: path.resolve(__dirname, 'app')
       },
+      {
+        from: path.resolve(__dirname, 'src/static'),
+        to: path.resolve(__dirname, 'app')
+      }
     ]
   })
   ];
