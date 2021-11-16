@@ -4,6 +4,8 @@
 @import "settings/base";
 @import "elements/radio";
 
+@import "blocks/menu";
+
 .form {
 	padding: 50px 0;
 
@@ -128,7 +130,6 @@
 						pointer-events: all;
 						visibility: visible;
 					}
-
 				}
 			}
 		}
