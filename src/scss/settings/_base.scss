@@ -11,8 +11,28 @@ body {
 	position: relative;
 	width: 100%;
 	min-width: 320px;
-	max-width: 1920px;
+	max-width: 1254px; // w/padding
 	margin: 0 auto;
 	padding: 0 15px;
 	box-sizing: border-box;
+}
+
+.colgroup {
+	display: flex;
+
+	.col {
+		flex-shrink: 0;
+
+		&--aside {
+			width: 265px;
+		}
+
+		&--body {
+			flex-grow: 1;
+		}
+
+		&--right {
+			margin-left: 24px;
+		}
+	}
 }
