@@ -1,33 +1,78 @@
 window.onload = function () {
-    let formHeadFilterStatus = document.querySelector('.form__head-filter__status');
+    /****
+     * detect mobile device
+     * ****/
 
-    document.querySelector('.form__head-filter__status .status__lnk').addEventListener('click', function (e) {
-        e.preventDefault();
-        formHeadFilterStatus.classList.toggle('vis')
-    });
-
-    window.addEventListener('click', function () {
-        formHeadFilterStatus.classList.remove('vis');
-    });
-
-    formHeadFilterStatus.addEventListener('click', function (e) {
-        e.stopPropagation();
-    });
-
-    /********/
-
-    let menu = document.querySelector('.menu');
-    let menuOffset = menu.offsetTop;
-
-    window.addEventListener('scroll', function(e) {
-        if (window.pageYOffset >= menuOffset + 30 ) {
-            menu.classList.add('fixed')
-        } else {
-            menu.classList.remove('fixed')
+    let isMobile = {
+        Android: function () {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function () {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function () {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function () {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function () {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function () {
+            return (
+                isMobile.Android()
+                || isMobile.BlackBerry()
+                || isMobile.iOS()
+                || isMobile.Opera()
+                || isMobile.Windows()
+            );
         }
-    });
+    };
 
-    /*******/
+    /****
+     * toggle mobile menu
+     * ****/
+
+    if(window.innerWidth < 840) {
+        let menuToggle = document.querySelector('.menu-toggle');
+        console.log(menuToggle);
+
+        menuToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            menuToggle.classList.toggle('menu-toggle--opened')
+
+            document.querySelector('.menu').classList.toggle('menu--visible')
+        });
+    }
+
+    /****
+     *  fixed menu
+     * ****/
+
+    function fixMenu() {
+        if(window.innerWidth > 840 && !isMobile.any()) {
+            let menu = document.querySelector('.menu');
+            let menuOffset = menu.offsetTop;
+
+            window.addEventListener('scroll', function (e) {
+                if (window.pageYOffset >= menuOffset + 30) {
+                    menu.classList.add('fixed')
+                } else {
+                    menu.classList.remove('fixed')
+                }
+            });
+        }
+    }
+
+    fixMenu();
+    window.addEventListener('resize', fixMenu);
+
+
+    /***
+     * copy donation id to clipboard
+     * ****/
 
     let copyDonationIDLnk = document.querySelector('.donation__id-copy');
     let copyDonationTooltip = document.querySelector('.donation__id-copy-tooltip');
