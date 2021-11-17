@@ -46,5 +46,54 @@ window.onload = function () {
             _this.classList.remove('copied');
             copyDonationTooltip.textContent = 'Copy to clipboard';
         }, 1000)
+    });
+
+    /****
+     * set range slider val
+     * ****/
+
+    function setRangeVal(input) {
+        input.nextSibling.firstChild.textContent = input.value;
+    }
+
+    let borderSizeInput = document.querySelector('[name=border_size]')
+    let borderRadiusInput = document.querySelector('[name=border_radius]')
+
+    setRangeVal(borderSizeInput);
+    setRangeVal(borderRadiusInput);
+
+    borderSizeInput.addEventListener("input", () => setRangeVal(borderSizeInput));
+    borderRadiusInput.addEventListener("input", () => setRangeVal(borderRadiusInput));
+
+
+    /*****
+     * change currency symbol
+     * ***/
+
+    let currencySelect = document.querySelector('select[name=currency]');
+
+    currencySelect.addEventListener('change', function () {
+        document.querySelector('.form-currency-val').textContent = this.value
     })
+
+    /*****
+     * tabs
+     * *****/
+
+    let tabLinks = document.querySelectorAll(".settings__tabs .tabs__lnk")
+    let tabs = document.querySelectorAll('.settings__tabs-entry');
+    for (let tabLink of tabLinks) {
+        tabLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector('.tabs__entry--current').classList.remove('tabs__entry--current');
+            tabLink.parentNode.classList.add('tabs__entry--current');
+            let currentTab = this.getAttribute('href');
+            for (let tab of tabs) {
+                tab.style.display = 'none';
+            }
+            document.querySelector(currentTab).style.display = 'block';
+        })
+    }
+
+
 }
