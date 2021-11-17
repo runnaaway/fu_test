@@ -11,6 +11,14 @@
 		height: 100%;
 		opacity: 0;
 
+		&:focus {
+			& + .radio__title {
+				&:before {
+					box-shadow: 0 0 10px rgba($colorbase, .8);
+				}
+			}
+		}
+
 		&:checked {
 			& + .radio__title {
 				&:before {
@@ -28,9 +36,8 @@
 
 	&__title {
 		position: relative;
+		display: inline-block;
 		padding-left: 36px;
-		font-size: 16px;
-		line-height: 24px;
 
 		&:before {
 			content: '';
