@@ -2,9 +2,14 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	font: normal 400 100% $ffbase;
+	font: normal 400 16px/24px $ffbase;
 	color: $colorbase;
-	background: #F7F7F7 url(../assets/images/bg.jpg) center top no-repeat;
+	background: #F7F7F7;
+
+	@media(max-width: 600px) {
+		font-size: 14px;
+		line-height: 19px;
+	}
 }
 
 .block {
@@ -20,19 +25,36 @@ body {
 .colgroup {
 	display: flex;
 
+	@media(max-width: 840px) {
+		flex-direction: column-reverse;
+	}
+
 	.col {
 		flex-shrink: 0;
 
 		&--aside {
 			width: 265px;
+
+			@media(max-width: 840px) {
+				width: 100%;
+			}
 		}
 
 		&--body {
+			width: calc(100% - 265px - 24px);
 			flex-grow: 1;
+
+			@media(max-width: 840px) {
+				width: 100%;
+			}
 		}
 
 		&--right {
 			margin-left: 24px;
+
+			@media(max-width: 840px) {
+				margin: 0 0 24px;
+			}
 		}
 	}
 }
