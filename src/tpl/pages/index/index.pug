@@ -10,13 +10,11 @@ block content
                     .form__head-filter__search
                         input(type='search' placeholder='Search' name='search' autocomplete='off')
                     .form__head-filter__status
-                        a.status__lnk(href='#') All statuses
-                        ul.status__list
-                            each entry in ['All statuses', 'Success', 'Pending', 'Error']
-                                li.status__list-item
-                                    label.radio
-                                        input.radio__input(type='radio' name='status' value=entry)
-                                        span.radio__title=entry
+                        select(name='donations_status')
+                            option(value='All statuses') All statuses
+                            option(value='Success') Success
+                            option(value='Pending') Pending
+                            option(value='Error') Error
             .colgroup
                 section.col.col--body.col--left
                     section.donation
