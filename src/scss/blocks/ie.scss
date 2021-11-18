@@ -1,0 +1,36 @@
+.is-ie {
+	.form__head-filter__status {
+		border: 1px solid #A9ABAE;
+
+		&:after {
+			content: none;
+		}
+
+		select {
+			padding: 0;
+			background: #ffffff;
+		}
+	}
+
+	.donation__id-copy {
+		display: none;
+	}
+
+	.form-select {
+		select {
+			padding-right: 0;
+		}
+
+		&:after {
+			content: none;
+		}
+	}
+
+	.form-range-val {
+		display: none;
+	}
+
+	input[type=range] {
+		padding: 0;
+	}
+}
