@@ -109,10 +109,19 @@ window.onload = function () {
     let copyDonationTooltip = document.querySelector('.donation__id-copy-tooltip');
     let donationID = document.querySelector('.donation__id-val').textContent;
 
+    function CopyToClipboard(text) {
+        if (navigator.clipboard !== undefined) {//Chrome
+            navigator.clipboard.writeText(text)
+        }
+        else if(window.clipboardData) { // Internet Explorer
+            window.clipboardData.setData("Text", text);
+        }
+    }
+
     copyDonationIDLnk.addEventListener('click', function (e) {
         e.preventDefault();
         this.classList.add('copied');
-        navigator.clipboard.writeText(donationID);
+        CopyToClipboard(donationID)
         copyDonationTooltip.textContent = 'Copied!';
     });
 
@@ -132,15 +141,16 @@ window.onload = function () {
         input.nextSibling.firstChild.textContent = input.value;
     }
 
-    let borderSizeInput = document.querySelector('[name=border_size]')
-    let borderRadiusInput = document.querySelector('[name=border_radius]')
+    if(!detectIE) {
+        let borderSizeInput = document.querySelector('[name=border_size]')
+        let borderRadiusInput = document.querySelector('[name=border_radius]')
 
-    setRangeVal(borderSizeInput);
-    setRangeVal(borderRadiusInput);
+        setRangeVal(borderSizeInput);
+        setRangeVal(borderRadiusInput);
 
-    borderSizeInput.addEventListener("input", () => setRangeVal(borderSizeInput));
-    borderRadiusInput.addEventListener("input", () => setRangeVal(borderRadiusInput));
-
+        borderSizeInput.addEventListener("input", () => setRangeVal(borderSizeInput));
+        borderRadiusInput.addEventListener("input", () => setRangeVal(borderRadiusInput));
+    }
 
     /*****
      * change currency symbol
