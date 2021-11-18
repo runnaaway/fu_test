@@ -17,6 +17,6 @@ article.donation
             .donation__info-item
                 .donation__info-item__title=entry[0]
                 - if (index === 0)
-                .donation__info-item__status.success=entry[1]
+                    .donation__info-item__status.success=entry[1]
                 - else
-                a.donation__info-item__lnk(href='#')=entry[1]
+                    a.donation__info-item__lnk(href='#')=entry[1]
