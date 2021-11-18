@@ -4,7 +4,8 @@
   "main": "webpack.config.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode production",
-    "dev": "cross-env NODE_ENV=development webpack serve --mode development"
+    "dev": "cross-env NODE_ENV=development webpack serve --mode development",
+    "deploy": "gh-pages -d app"
   },
   "author": "",
   "license": "ISC",
@@ -42,6 +43,7 @@
   },
   "dependencies": {
     "expose-loader": "^3.0.0",
+    "gh-pages": "^3.2.3",
     "normalize.css": "^8.0.1"
   }
 }
