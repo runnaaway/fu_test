@@ -316,7 +316,12 @@
 						background-size: contain;
 					}
 				}
+			}
 
+			&__lnk {
+				&:hover {
+					text-decoration: none;
+				}
 			}
 		}
 	}
