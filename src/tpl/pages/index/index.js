@@ -124,20 +124,33 @@ window.onload = function () {
      * tabs
      * *****/
 
-    let tabLinks = document.querySelectorAll(".settings__tabs .tabs__lnk")
-    let tabs = document.querySelectorAll('.settings__tabs-entry');
-    for (let tabLink of tabLinks) {
-        tabLink.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector('.tabs__entry--current').classList.remove('tabs__entry--current');
-            tabLink.parentNode.classList.add('tabs__entry--current');
-            let currentTab = this.getAttribute('href');
-            for (let tab of tabs) {
-                tab.style.display = 'none';
+    function tabs() {
+        let bindAll = function() {
+            let menuElements = document.querySelectorAll('[data-tab]');
+            for(let i = 0; i < menuElements.length ; i++) {
+                menuElements[i].addEventListener('click', change, false);
             }
-            document.querySelector(currentTab).style.display = 'block';
-        })
+        }
+
+        let clear = function() {
+            let menuElements = document.querySelectorAll('[data-tab]');
+            for(let i = 0; i < menuElements.length ; i++) {
+                menuElements[i].parentNode.classList.remove('tabs__entry--current');
+                let id = menuElements[i].getAttribute('data-tab');
+                document.getElementById(id).style.display = 'none';
+            }
+        }
+
+        let change = function(e) {
+            e.preventDefault();
+            clear();
+            e.target.parentNode.classList.add('tabs__entry--current');
+            let id = e.currentTarget.getAttribute('data-tab');
+            document.getElementById(id).style.display = 'block';
+        }
+
+        bindAll();
     }
 
-
+    tabs();
 }

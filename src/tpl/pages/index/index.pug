@@ -42,9 +42,9 @@ block content
                     section.settings
                         nav.settings__tabs
                             ul.tabs__list
-                                each entry, index in [['Behavior', '#tab-behavior'], ['Appearance', '#tab-appearance'], ['Custom Fields', '#tab-custom-fields'], ['Questions', '#tab-questions'], ['URL Control', '#tab-url-control']]
+                                each entry, index in [['Behavior', 'tab-behavior'], ['Appearance', 'tab-appearance'], ['Custom Fields', 'tab-custom-fields'], ['Questions', 'tab-questions'], ['URL Control', 'tab-url-control']]
                                     li.tabs__entry(class={'tabs__entry--current': !index})
-                                        a.tabs__lnk(href=entry[1])=entry[0]
+                                        a.tabs__lnk(href='#' data-tab=entry[1])=entry[0]
                         section.settings__tabs-container
                             article.settings__tabs-entry#tab-behavior
                                 label.form-control
