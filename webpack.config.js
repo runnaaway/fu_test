@@ -13,7 +13,6 @@ const filename = (ext) => `[name].${ext}`;
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
-
 const optimization = () => {
   const config = {
     runtimeChunk: 'single',
@@ -42,7 +41,11 @@ const plugins = () => {
   new HTMLWebpackPlugin({
     template: path.resolve(__dirname, 'src/tpl/pages/index/index.pug'),
     filename: 'index.html',
-    minify: false
+    minify: false,
+    templateParameters: {
+      isProd,
+      assetsImgPath: isProd ? '/fu_test/img/' : '/img/'
+    }
   }),
   new CleanWebpackPlugin(),
   new MiniCssExtractPlugin({
