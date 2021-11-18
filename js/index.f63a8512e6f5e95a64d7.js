@@ -1,1 +1,0 @@
-(self.webpackChunk=self.webpackChunk||[]).push([[826],{885:function(){window.onload=function(){if(window.innerWidth<840){var e=document.querySelector(".menu-toggle");e.addEventListener("click",(function(n){n.preventDefault(),e.classList.toggle("menu-toggle--opened"),document.querySelector(".menu").classList.toggle("menu--visible")}))}}}},function(e){var n;n=885,e(e.s=n)}]);
