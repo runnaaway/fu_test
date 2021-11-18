@@ -116,8 +116,10 @@
 				}
 
 				select {
-					background: transparent;
 					-webkit-appearance: none;
+					-moz-appearance: none;
+					appearance: none;
+					background: transparent;
 					border: none;
 					padding: 10px 25px 10px 10px;
 				}
