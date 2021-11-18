@@ -141,7 +141,7 @@ window.onload = function () {
         input.nextSibling.firstChild.textContent = input.value;
     }
 
-    if(!detectIE) {
+    if(!detectIE()) {
         let borderSizeInput = document.querySelector('[name=border_size]')
         let borderRadiusInput = document.querySelector('[name=border_radius]')
 
