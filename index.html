@@ -19,146 +19,120 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/fu_test/img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/fu_test/img/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/fu_test/img/favicon/favicon-16x16.png">
-  <link href="./css/main.273fb327090440c90d2e.css" rel="stylesheet"></head>
+  <link href="./css/main.457269532df40d3b7940.css" rel="stylesheet"></head>
   <body>
     <section class="form">
       <div class="block">
-        <header class="form__head">
-          <h1 class="form__head-title">Donations</h1>
-          <div class="form__head-filter">
-            <div class="form__head-filter__search">
-              <input type="search" placeholder="Search" name="search" autocomplete="off">
-            </div>
-            <div class="form__head-filter__status">
-              <select name="donations_status">
-                <option value="All statuses">All statuses</option>
-                <option value="Success">Success</option>
-                <option value="Pending">Pending</option>
-                <option value="Error">Error</option>
-              </select>
-            </div>
-          </div>
-        </header>
+<header class="form__head">
+  <h1 class="form__head-title">Donations</h1>
+  <div class="form__head-filter">
+    <div class="form__head-filter__search">
+      <input type="search" placeholder="Search" name="search" autocomplete="off">
+    </div>
+    <div class="form__head-filter__status">
+      <select name="donations_status">
+        <option value="All statuses">All statuses</option>
+        <option value="Success">Success</option>
+        <option value="Pending">Pending</option>
+        <option value="Error">Error</option>
+      </select>
+    </div>
+  </div>
+</header>
         <div class="colgroup">
           <section class="col col--body col--left">
-            <section class="donation">
-              <div class="donation__top">
-                <div class="donation__top-left">
-                  <div class="donation__title">Donation</div>
-                  <div class="donation__sum"><span class="donation__sum-euro">€20.60 EUR</span> <span class="donation__sum-usd">≈ $22.22 USD</span></div>
-                </div>
-                <div class="donation__id">
-                  <div class="donation__id-title">ID</div>
-                  <div class="donation__id-id">
-                    <div class="donation__id-val">DYHY694Y</div><a class="donation__id-copy" href="#"><span class="donation__id-copy-tooltip">Copy to clipboard</span></a>
-                  </div>
-                </div>
-              </div>
-              <div class="donation__info">
-                <div class="donation__info-item">
-                  <div class="donation__info-item__title">Status</div>
-                  <div class="donation__info-item__status success">Success</div>
-                </div>
-                <div class="donation__info-item">
-                  <div class="donation__info-item__title">Supporter</div><a class="donation__info-item__lnk" href="#">Charlotte Ann</a>
-                </div>
-                <div class="donation__info-item">
-                  <div class="donation__info-item__title">Campaign</div><a class="donation__info-item__lnk" href="#">Workout for water</a>
-                </div>
-              </div>
-            </section>
             <section class="settings">
-              <nav class="settings__tabs">
-                <ul class="tabs__list">
-                  <li class="tabs__entry tabs__entry--current"><a class="tabs__lnk" href="#" data-tab="tab-behavior">Behavior</a></li>
-                  <li class="tabs__entry"><a class="tabs__lnk" href="#" data-tab="tab-appearance">Appearance</a></li>
-                  <li class="tabs__entry"><a class="tabs__lnk" href="#" data-tab="tab-custom-fields">Custom Fields</a></li>
-                  <li class="tabs__entry"><a class="tabs__lnk" href="#" data-tab="tab-questions">Questions</a></li>
-                  <li class="tabs__entry"><a class="tabs__lnk" href="#" data-tab="tab-url-control">URL Control</a></li>
-                </ul>
-              </nav>
-              <section class="settings__tabs-container">
-                <article class="settings__tabs-entry" id="tab-behavior">
-                  <label class="form-control">
-                    <div class="form__caption form__caption--center">Designation</div>
-                    <div class="form__field">
-                      <div class="form-select">
-                        <select name="designation">
-                          <option value="Match Checkout Setting">Match Checkout Setting</option>
-                          <option value="Other option">Other option</option>
-                          <option value="And one more">And one more</option>
-                        </select>
-                      </div>
-                    </div>
-                  </label>
-                  <div class="form-control">
-                    <div class="form__caption form__caption--center">Goal</div>
-                    <div class="form__field form__field--goal"><i class="form-currency-val">$</i>
-                      <input class="form-input" type="text" value="10.00">
-                      <div class="form-select form-select--currency">
-                        <select name="currency">
-                          <option value="$">$</option>
-                          <option value="€">€</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-control">
-                    <div class="form__caption">Default Amount</div>
-                    <div class="form__field form__field--column">
-                      <label class="radio">
-                        <input class="radio__input" type="radio" name="default_amount" value="Match Checkout Setting"><span class="radio__title">Match Checkout Setting</span>
-                      </label>
-                      <label class="radio">
-                        <input class="radio__input" type="radio" name="default_amount" value="Customize" checked><span class="radio__title">Customize</span>
-                      </label>
-                      <label class="checkbox checkbox--allow-change">
-                        <input class="checkbox__input" type="checkbox" name="allow_change" value="1" checked><span class="checkbox__title">Allow donor to change default currency</span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="form-control">
-                    <div class="form__caption">Border size</div>
-                    <div class="form__field">
-                      <input type="range" min="0" max="5" value="2" name="border_size"><span class="form-range-val"><i></i>px</span>
-                    </div>
-                  </div>
-                  <div class="form-control">
-                    <div class="form__caption">Border radius</div>
-                    <div class="form__field">
-                      <input type="range" min="0" max="30" value="15" name="border_radius"><span class="form-range-val"><i></i>px</span>
-                    </div>
-                  </div>
-                </article>
-                <article class="settings__tabs-entry" id="tab-appearance">
-                  <p>Appearance content goes here</p>
-                </article>
-                <article class="settings__tabs-entry" id="tab-custom-fields">
-                  <p>Custom fields content goes here</p>
-                </article>
-                <article class="settings__tabs-entry" id="tab-questions">
-                  <p>Questions content goes here</p>
-                </article>
-                <article class="settings__tabs-entry" id="tab-url-control">
-                  <p>URL control content goes here</p>
-                </article>
-              </section>
-              <section class="settings__btn-container">
-                <button class="btn btn_green" type="submit">Save changes</button>
-                <button class="btn btn_white" type="reset">Cancel</button>
-              </section>
+<nav class="settings__tabs">
+  <ul class="tabs__list">
+    <li class="tabs__entry tabs__entry--current"><a class="tabs__lnk" href="#" data-tab="tab-behavior">Behavior</a></li>
+    <li class="tabs__entry"><a class="tabs__lnk" href="#" data-tab="tab-appearance">Appearance</a></li>
+    <li class="tabs__entry"><a class="tabs__lnk" href="#" data-tab="tab-custom-fields">Custom Fields</a></li>
+    <li class="tabs__entry"><a class="tabs__lnk" href="#" data-tab="tab-questions">Questions</a></li>
+    <li class="tabs__entry"><a class="tabs__lnk" href="#" data-tab="tab-url-control">URL Control</a></li>
+  </ul>
+</nav>
+<section class="settings__tabs-container">
+  <article class="settings__tabs-entry" id="tab-behavior">
+    <label class="form-control">
+      <div class="form__caption form__caption--center">Designation</div>
+      <div class="form__field">
+        <div class="form-select">
+          <select name="designation">
+            <option value="Match Checkout Setting">Match Checkout Setting</option>
+            <option value="Other option">Other option</option>
+            <option value="And one more">And one more</option>
+          </select>
+        </div>
+      </div>
+    </label>
+    <div class="form-control">
+      <div class="form__caption form__caption--center">Goal</div>
+      <div class="form__field form__field--goal"><i class="form-currency-val">$</i>
+        <input class="form-input" type="text" value="10.00">
+        <div class="form-select form-select--currency">
+          <select name="currency">
+            <option value="$">$</option>
+            <option value="€">€</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="form-control">
+      <div class="form__caption">Default Amount</div>
+      <div class="form__field form__field--column">
+        <label class="radio">
+          <input class="radio__input" type="radio" name="default_amount" value="Match Checkout Setting"><span class="radio__title">Match Checkout Setting</span>
+        </label>
+        <label class="radio">
+          <input class="radio__input" type="radio" name="default_amount" value="Customize" checked><span class="radio__title">Customize</span>
+        </label>
+        <label class="checkbox checkbox--allow-change">
+          <input class="checkbox__input" type="checkbox" name="allow_change" value="1" checked><span class="checkbox__title">Allow donor to change default currency</span>
+        </label>
+      </div>
+    </div>
+    <div class="form-control">
+      <div class="form__caption">Border size</div>
+      <div class="form__field">
+        <input type="range" min="0" max="5" value="2" name="border_size"><span class="form-range-val"><i></i>px</span>
+      </div>
+    </div>
+    <div class="form-control">
+      <div class="form__caption">Border radius</div>
+      <div class="form__field">
+        <input type="range" min="0" max="30" value="15" name="border_radius"><span class="form-range-val"><i></i>px</span>
+      </div>
+    </div>
+  </article>
+  <article class="settings__tabs-entry" id="tab-appearance">
+    <p>Appearance content goes here</p>
+  </article>
+  <article class="settings__tabs-entry" id="tab-custom-fields">
+    <p>Custom fields content goes here</p>
+  </article>
+  <article class="settings__tabs-entry" id="tab-questions">
+    <p>Questions content goes here</p>
+  </article>
+  <article class="settings__tabs-entry" id="tab-url-control">
+    <p>URL control content goes here</p>
+  </article>
+</section>
+<section class="settings__btn-container">
+  <button class="btn btn_green" type="submit">Save changes</button>
+  <button class="btn btn_white" type="reset">Cancel</button>
+</section>
             </section>
           </section>
-          <aside class="col col--aside col--right"><a class="menu-toggle" href="#">Settings menu</a>
-            <ul class="menu">
-              <li class="menu__entry"><a class="menu__lnk" href="#"><img src="/fu_test/img/icon_amount.svg" alt="">Change Amount</a></li>
-              <li class="menu__entry"><a class="menu__lnk" href="#"><img src="/fu_test/img/icon_payment.svg" alt="">Change Payment Method</a></li>
-              <li class="menu__entry"><a class="menu__lnk" href="#"><img src="/fu_test/img/icon_date.svg" alt="">Change Date</a></li>
-              <li class="menu__entry"><a class="menu__lnk" href="#"><img src="/fu_test/img/icon_cancel.svg" alt="">Cancel Recurring</a></li>
-            </ul>
+          <aside class="col col--aside col--right"><a class="menu-toggle" href="#">Settings menu
+  <ul class="menu">
+    <li class="menu__entry"><a class="menu__lnk" href="#"><img src="/fu_test/img/icon_amount.svg" alt="">Change Amount</a></li>
+    <li class="menu__entry"><a class="menu__lnk" href="#"><img src="/fu_test/img/icon_payment.svg" alt="">Change Payment Method</a></li>
+    <li class="menu__entry"><a class="menu__lnk" href="#"><img src="/fu_test/img/icon_date.svg" alt="">Change Date</a></li>
+    <li class="menu__entry"><a class="menu__lnk" href="#"><img src="/fu_test/img/icon_cancel.svg" alt="">Cancel Recurring</a></li>
+  </ul></a>
           </aside>
         </div>
       </div>
     </section>
-  <script src="./js/runtime.04d64b98058e5d4e8745.js"></script><script src="./js/main.ee245c4f87558890aef5.js"></script><script src="./js/index.ea923c51288cc68fc3c4.js"></script></body>
+  <script src="./js/runtime.04d64b98058e5d4e8745.js"></script><script src="./js/main.749164c32ef46115a2f8.js"></script><script src="./js/index.ea923c51288cc68fc3c4.js"></script></body>
 </html>
