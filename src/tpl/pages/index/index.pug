@@ -4,110 +4,14 @@ block defaultVars
 block content
     section.form
         .block
-            header.form__head
-                h1.form__head-title Donations
-                .form__head-filter
-                    .form__head-filter__search
-                        input(type='search' placeholder='Search' name='search' autocomplete='off')
-                    .form__head-filter__status
-                        select(name='donations_status')
-                            option(value='All statuses') All statuses
-                            option(value='Success') Success
-                            option(value='Pending') Pending
-                            option(value='Error') Error
+            include ../../blocks/header
             .colgroup
                 section.col.col--body.col--left
-                    section.donation
-                        .donation__top
-                            .donation__top-left
-                                .donation__title Donation
-                                .donation__sum
-                                    span.donation__sum-euro €20.60 EUR
-                                    | #{' '}
-                                    span.donation__sum-usd ≈ $22.22 USD
-                            .donation__id
-                                .donation__id-title ID
-                                .donation__id-id
-                                    .donation__id-val DYHY694Y
-                                    a.donation__id-copy(href='#')
-                                        span.donation__id-copy-tooltip Copy to clipboard
-                        .donation__info
-                            each entry, index in [['Status', 'Success'], ['Supporter', 'Charlotte Ann'], ['Campaign', 'Workout for water']]
-                                .donation__info-item
-                                    .donation__info-item__title=entry[0]
-                                    - if (index === 0)
-                                        .donation__info-item__status.success=entry[1]
-                                    - else
-                                        a.donation__info-item__lnk(href='#')=entry[1]
                     section.settings
-                        nav.settings__tabs
-                            ul.tabs__list
-                                each entry, index in [['Behavior', 'tab-behavior'], ['Appearance', 'tab-appearance'], ['Custom Fields', 'tab-custom-fields'], ['Questions', 'tab-questions'], ['URL Control', 'tab-url-control']]
-                                    li.tabs__entry(class={'tabs__entry--current': !index})
-                                        a.tabs__lnk(href='#' data-tab=entry[1])=entry[0]
-                        section.settings__tabs-container
-                            article.settings__tabs-entry#tab-behavior
-                                label.form-control
-                                    .form__caption.form__caption--center Designation
-                                    .form__field
-                                        .form-select
-                                            select(name='designation')
-                                                option(value='Match Checkout Setting') Match Checkout Setting
-                                                option(value='Other option') Other option
-                                                option(value='And one more') And one more
-                                .form-control
-                                    .form__caption.form__caption--center Goal
-                                    .form__field.form__field--goal
-                                        i.form-currency-val $
-                                        input.form-input(type='text' value='10.00')
-                                        .form-select.form-select--currency
-                                            select(name='currency')
-                                                option(value='$') $
-                                                option(value='€') €
-                                div.form-control
-                                    .form__caption Default Amount
-                                    .form__field.form__field--column
-                                        label.radio
-                                            input.radio__input(type='radio' name='default_amount' value='Match Checkout Setting')
-                                            span.radio__title Match Checkout Setting
-                                        label.radio
-                                            input.radio__input(type='radio' name='default_amount' value='Customize' checked)
-                                            span.radio__title Customize
-                                        label.checkbox.checkbox--allow-change
-                                            input.checkbox__input(type='checkbox' name='allow_change' value='1' checked)
-                                            span.checkbox__title Allow donor to change default currency
-                                .form-control
-                                    .form__caption Border size
-                                    .form__field
-                                        input(type='range' min='0' max='5' value='2' name='border_size')
-                                        span.form-range-val
-                                            i
-                                            | px
-                                .form-control
-                                    .form__caption Border radius
-                                    .form__field
-                                        input(type='range' min='0' max='30' value='15' name='border_radius')
-                                        span.form-range-val
-                                            i
-                                            | px
-                            article.settings__tabs-entry#tab-appearance
-                                p Appearance content goes here
-                            article.settings__tabs-entry#tab-custom-fields
-                                p Custom fields content goes here
-                            article.settings__tabs-entry#tab-questions
-                                p Questions content goes here
-                            article.settings__tabs-entry#tab-url-control
-                                p URL control content goes here
-                        section.settings__btn-container
-                            button.btn.btn_green(type='submit') Save changes
-                            button.btn.btn_white(type='reset') Cancel
+                        include ../../blocks/settings/nav
+                        include ../../blocks/settings/tabs
+                        include ../../blocks/settings/buttons
                 aside.col.col--aside.col--right
-                    a.menu-toggle(href='#') Settings menu
-                    ul.menu
-                        each entry in [['amount', 'Change Amount'], ['payment', 'Change Payment Method'], ['date', 'Change Date'], ['cancel', 'Cancel Recurring']]
-                            li.menu__entry
-                                a.menu__lnk(href='#')
-                                    img(src=assetsImgPath + 'icon_' + entry[0] + '.svg' alt='')
-                                    | #{entry[1]}
+                    include ../../blocks/menu
 
 

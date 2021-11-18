@@ -1,0 +1,7 @@
+a.menu-toggle(href='#') Settings menu
+    ul.menu
+        each entry in [['amount', 'Change Amount'], ['payment', 'Change Payment Method'], ['date', 'Change Date'], ['cancel', 'Cancel Recurring']]
+            li.menu__entry
+                a.menu__lnk(href='#')
+                    img(src=assetsImgPath + 'icon_' + entry[0] + '.svg' alt='')
+                    | #{entry[1]}

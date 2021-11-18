@@ -1,0 +1,11 @@
+header.form__head
+    h1.form__head-title Donations
+    .form__head-filter
+        .form__head-filter__search
+            input(type='search' placeholder='Search' name='search' autocomplete='off')
+        .form__head-filter__status
+            select(name='donations_status')
+                option(value='All statuses') All statuses
+                option(value='Success') Success
+                option(value='Pending') Pending
+                option(value='Error') Error

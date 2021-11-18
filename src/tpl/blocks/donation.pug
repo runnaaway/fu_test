@@ -1,0 +1,22 @@
+article.donation
+    .donation__top
+        .donation__top-left
+            .donation__title Donation
+            .donation__sum
+                span.donation__sum-euro €20.60 EUR
+                | #{' '}
+                span.donation__sum-usd ≈ $22.22 USD
+        .donation__id
+            .donation__id-title ID
+            .donation__id-id
+                .donation__id-val DYHY694Y
+                a.donation__id-copy(href='#')
+                    span.donation__id-copy-tooltip Copy to clipboard
+    .donation__info
+        each entry, index in [['Status', 'Success'], ['Supporter', 'Charlotte Ann'], ['Campaign', 'Workout for water']]
+            .donation__info-item
+                .donation__info-item__title=entry[0]
+                - if (index === 0)
+                .donation__info-item__status.success=entry[1]
+                - else
+                a.donation__info-item__lnk(href='#')=entry[1]
