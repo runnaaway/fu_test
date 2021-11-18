@@ -36,7 +36,6 @@ window.onload = function () {
 
     if(window.innerWidth < 840) {
         let menuToggle = document.querySelector('.menu-toggle');
-        console.log(menuToggle);
 
         menuToggle.addEventListener('click', (e) => {
             e.preventDefault();
