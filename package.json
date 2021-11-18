@@ -11,9 +11,14 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
-    "babel-loader": "^8.2.2",
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
+    "@babel/plugin-proposal-decorators": "^7.16.4",
+    "@babel/plugin-proposal-pipeline-operator": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.4",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/runtime": "^7.16.3",
+    "babel-loader": "^8.2.3",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^7.0.0",
     "cross-env": "^7.0.3",
@@ -42,6 +47,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "core-js": "^3.19.1",
     "expose-loader": "^3.0.0",
     "gh-pages": "^3.2.3",
     "normalize.css": "^8.0.1"

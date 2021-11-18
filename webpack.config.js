@@ -102,7 +102,16 @@ module.exports = {
   output: {
     filename: `./js/${filename('js')}`,
     path: path.resolve(__dirname, 'app'),
-    publicPath: ''
+    publicPath: '',
+    environment: {
+      arrowFunction: false,
+      bigIntLiteral: false,
+      const: false,
+      destructuring: false,
+      dynamicImport: false,
+      forOf: false,
+      module: false,
+    },
   }, 
   devServer: {
     historyApiFallback: true,
