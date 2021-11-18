@@ -8,7 +8,7 @@ const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plug
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
-const filename = (ext) => `[name].${ext}`;
+const filename = (ext) => isProd ? `[name].[contenthash].${ext}` : `[name].${ext}`;
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
